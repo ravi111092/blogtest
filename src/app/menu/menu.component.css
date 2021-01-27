@@ -1,0 +1,10 @@
+.card_custom{
+    margin: 30px;
+    box-shadow: 5px 5px 15px #888888;
+}
+
+.datebox{
+    margin: 10px;
+    background-color: #ffffff;
+    float: right;
+}

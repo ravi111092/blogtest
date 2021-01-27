@@ -1,0 +1,13 @@
+<div class="card card_custom" *ngIf="viewData">
+    <div class="w-100">
+        <a><img class="w-50" src={{viewData.imgUrl}}></a>
+    </div>
+    <div class="card-body">
+      <h4 class="card-title"><a href="" style="text-decoration: none;">{{viewData.title}}</a></h4>
+      <h5><i class="fa fa-user-circle"></i> {{viewData.author}} &nbsp;&nbsp;&nbsp; <i style="margin-right: 5px;" class="fa fa-calendar" aria-hidden="true"></i>  {{viewData.created_at | date:'medium'}}</h5>
+      <p class="card-text">{{viewData.content}}</p>
+      <a style="display: inline-block;"><h4><i class="fa fa-facebook-square"></i></h4></a>
+      <a style="display: inline-block;"><h4><i class="fa fa-twitter"></i></h4></a>
+    </div>
+  
+</div>

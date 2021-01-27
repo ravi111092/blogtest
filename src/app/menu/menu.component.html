@@ -1,0 +1,38 @@
+<div class="container-fluid"> 
+    <div class="row">
+            <div class='col-md-10'>
+                <div class="card card_custom" *ngFor="let data of blogdatas">
+                    <div class="w-100">
+                        <a (click)=takemeto(data)><img class="w-50" src={{data.imgUrl}}></a>
+                    </div>
+                    <div class="card-body">
+                      <h4 class="card-title"><a href="" style="text-decoration: none;">{{data.title}}</a></h4>
+                      <h5><i class="fa fa-user-circle"></i> {{data.author}} &nbsp;&nbsp;&nbsp; <i style="margin-right: 5px;" class="fa fa-calendar" aria-hidden="true"></i>  {{data.created_at | date:'medium'}}</h5>
+                      <p class="card-text">{{data.content}}</p>
+                     
+                      <a *ngIf="data.adv_buttonlink" class="btn btn-primary" href="{{data.adv_buttonlink}}">{{data.adv_butttonname}}</a>  
+                    </div>
+                </div>
+                
+                <div class="card-footer pb-0 pt-3">
+                    <jw-pagination [items]="items" (changePage)="onChangePage($event)"></jw-pagination>
+                </div>
+            </div>
+            <div class="col-md-2"> 
+                <h1>Advertisment</h1>
+                <div *ngFor="let data of blogdatas" style="border-bottom: 1px solid grey; margin-top:15px;">
+                    <div class="w-100">
+                        <a (click)=takemeto(data)><img class="w-50" src={{data.imgUrl}}></a>
+                        <div class="font-weight-light" style="color: grey;">{{data.created_at | date:'medium'}}</div>
+                    </div>
+                    <div class="card-body">
+                      <h4 class="card-title"><a href="" style="text-decoration: none;">{{data.title}}</a></h4>
+                      <p class="card-text"></p>
+                    </div>
+                </div>
+            </div>
+    </div>
+</div>
+
+
+
